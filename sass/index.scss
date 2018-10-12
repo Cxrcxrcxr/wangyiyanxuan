@@ -1,0 +1,93 @@
+@import "_reset.scss";
+
+.shopCar{
+    height: 40px;
+    padding: 20px;
+    background: #ddd;
+    .empty{
+        width: 40px;
+        height: 40px;
+        margin-top: 20px;
+        background-image: url(../images/car1.png);
+        background-size: 40px 40px;
+        position: relative;
+        &.full{
+            background-image: url(../images/car2.png);
+        }
+
+        span{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            background: #fff;
+            border-radius: 50%;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        .goods-list{
+            width: 180px;
+            position: absolute;
+            top: 40px;
+
+            li{
+                width: 180px;
+                height: 60px;
+                background: rgba(0,0,0,.5);
+
+                img{
+                    height: 60px;
+                    float: left;
+                }
+                h3{
+                    float: left;
+                    line-height: 60px;
+                    padding-left: 10px;
+                }
+                strong{
+                    display: block;
+                    float: left;
+                    line-height: 60px;
+                    padding:0 5px;
+                    color: yellowgreen;
+                }
+            }
+        }
+    }
+}
+
+.container{
+    width:1120px;
+    margin: 0 auto;
+
+    ul{
+        li{
+            width: 224px;
+            height: 405px;
+            float: left;
+            text-align: center;
+            box-shadow: 0 0 5px #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            h3{
+                line-height: 40px;
+                text-align: left;
+            }
+            img{
+                display: block;
+                width: 224px;
+                height: 340px;
+            }
+            button{
+                width: 100%;
+                border-radius: 5px ;
+                background:none;
+                border : 1px solid #ddd;
+                background: yellowgreen;
+                color: #fff;
+            }
+        }
+    }
+}
