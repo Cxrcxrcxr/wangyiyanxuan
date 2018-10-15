@@ -35,13 +35,13 @@ gulp.task('connect', function() {
 // localhost:8888/proxy/目标;
 
 gulp.task("html", ()=>{
-    return gulp.src("*.html").pipe(gulp.dest("dist/")).pipe(connect.reload());;
+    return gulp.src("*.html").pipe(gulp.dest("dist/")).pipe(connect.reload());
 })
 
 gulp.task("watch", ()=>{
-    gulp.watch("yanxuan.html",["html","sass"]);
-    gulp.watch("login.html",["html","sass"])
+    gulp.watch("*.html",["html","sass"]);
     gulp.watch("sass/*.scss",["html","sass"]);
+    gulp.watch("js/*.js",["html","script"])
     
 })
 
@@ -53,20 +53,21 @@ gulp.task("script", ()=>{
     return gulp.src(["js/*.js"])
 //  .pipe(concat("main.js"))
     .pipe(uglify())
-    .pipe(gulp.dest("dist/script"));
+    .pipe(gulp.dest("dist/js"));
 })
 
-gulp.task("css", ()=>{
-    return gulp.src(["css/*.css"])
-           .pipe(cleanCss())
-           .pipe(gulp.dest("dist/css"))
-})
+//gulp.task("css", ()=>{
+//  return gulp.src(["css/*.css"])
+//         .pipe(cleanCss())
+//         .pipe(gulp.dest("dist/css"))
+//})
 
 gulp.task("sass", () =>{
     return gulp.src(["sass/*.scss"])
            .pipe(sass().on("error",sass.logError))
            .pipe(gulp.dest("dist/css"))
            .pipe(gulp.dest("css"))
+           .pipe(connect.reload());
 })
 
 // 编译 ? es6 => es5;
