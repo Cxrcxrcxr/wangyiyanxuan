@@ -10,19 +10,29 @@ body{min-height: 100%;
     }
     
     section{
-    	width: 100%;
+        width: 100%;
+        a{
+            color: #333;
+            &:hover{
+                color:#b4a078;
+            }
+        }
+        
     }
     .sowing-map-top{
     	width: 100%;
     	height: 420px;
-    	overflow: hidden;
+        overflow: hidden;
+        position: relative;
 		.sowing-con{
+            display: block;
             width: 100%;
             height: 100%;
-            position: relative;
-            z-index: 1;
+            position: relative;           
             ul{
-                width: 800%; 
+                position: absolute;
+                width:800%;
+                height:100% ;
                 li{
                     width: 12.5%;
                     float: left;
@@ -36,5 +46,58 @@ body{min-height: 100%;
 			
 		
 		}
-	
-	}
+        button{
+            display: block;                   
+            width: 50px;
+            height:50px;
+            background: #D0C4AF;
+            position: absolute;
+            
+            top: 200px!important;
+            border: none;
+            border-radius: 50%;
+            font-size: 30px;
+            color:#fff;
+            &.to-left{float: left;left: 186.5px;};
+            &.to-right{float: right;right: 186.5px;};
+            &:hover{background: #B19E7A;}
+        }
+        .sowing-index{
+            width: 100%;
+            height: 28px;
+            position: absolute;
+            bottom:4px;
+            z-index: 3; 
+            
+                li{
+                    display:block;
+                    width: 8px;  
+                    height: 8px;            
+                    margin:0 8px 10px;
+                    float: left;
+                    padding: 2px;               
+                    a{
+                        display: block;
+                        width: 6px;
+                        height: 6px;
+                        border: 1px solid #ccc;
+                        border-radius: 50%;  
+    
+    
+                    };
+                }
+                    &:hover{                                      
+                        border: none;
+                        box-shadow:0 0 0 4px #dfcead;
+                        border-radius: 50%;
+                        & a{background: #a7936e;
+                            border: none;
+                            border-radius: 50%;
+    
+                        };
+                    };
+                    
+                }
+                
+            
+        }

@@ -11,18 +11,25 @@ header {
 
 section {
   width: 100%; }
+  section a {
+    color: #333; }
+    section a:hover {
+      color: #b4a078; }
 
 .sowing-map-top {
   width: 100%;
   height: 420px;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
   .sowing-map-top .sowing-con {
+    display: block;
     width: 100%;
     height: 100%;
-    position: relative;
-    z-index: 1; }
+    position: relative; }
     .sowing-map-top .sowing-con ul {
-      width: 800%; }
+      position: absolute;
+      width: 800%;
+      height: 100%; }
       .sowing-map-top .sowing-con ul li {
         width: 12.5%;
         float: left; }
@@ -30,3 +37,49 @@ section {
           display: block;
           width: 100%;
           height: 100%; }
+  .sowing-map-top button {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: #D0C4AF;
+    position: absolute;
+    top: 200px !important;
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #fff; }
+    .sowing-map-top button.to-left {
+      float: left;
+      left: 186.5px; }
+    .sowing-map-top button.to-right {
+      float: right;
+      right: 186.5px; }
+    .sowing-map-top button:hover {
+      background: #B19E7A; }
+  .sowing-map-top .sowing-index {
+    width: 100%;
+    height: 28px;
+    position: absolute;
+    bottom: 4px;
+    z-index: 3; }
+    .sowing-map-top .sowing-index li {
+      display: block;
+      width: 8px;
+      height: 8px;
+      margin: 0 8px 10px;
+      float: left;
+      padding: 2px; }
+      .sowing-map-top .sowing-index li a {
+        display: block;
+        width: 6px;
+        height: 6px;
+        border: 1px solid #ccc;
+        border-radius: 50%; }
+    .sowing-map-top .sowing-index:hover {
+      border: none;
+      box-shadow: 0 0 0 4px #dfcead;
+      border-radius: 50%; }
+      .sowing-map-top .sowing-index:hover a {
+        background: #a7936e;
+        border: none;
+        border-radius: 50%; }
