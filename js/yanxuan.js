@@ -50,7 +50,7 @@ function Banner(){}
                 this.animate();
             },
             toIndex:function(event){
-                var target = event.target || event.scrElement;
+                var target = event.target || event.srcElement;
                 this.nowIndex = $(target).index();
                 this.animate();
             },

@@ -17,6 +17,10 @@ body{min-height: 100%;
                 color:#b4a078;
             }
         }
+        .sec-center{
+            width: 1090px;
+            margin: 0 auto;
+        }
         
     }
     .sowing-map-top{
@@ -33,8 +37,7 @@ body{min-height: 100%;
                 position: absolute;
                 width:800%;
                 height:100% ;
-                li{
-                    width: 12.5%;
+                li{                    
                     float: left;
                     img{
                         display: block;
@@ -63,48 +66,122 @@ body{min-height: 100%;
             &:hover{background: #B19E7A;}
         }
         .sowing-index{
-            width: 100%;
+            margin-left:50%;
             height: 28px;
             position: absolute;
-            bottom:4px;
-            z-index: 3; 
+            left: -96px;
+            z-index: 10; 
+            bottom:4px ;
             
                 li{
                     display:block;
-                    width: 8px;  
-                    height: 8px;            
-                    margin:0 8px 10px;
-                    float: left;
-                    padding: 2px;               
+                    width: 12px;  
+                    height: 12px;            
+                    margin: 0 8px 10px;
+                    float: left;                     
+                    text-align: center;
+                    line-height: 10px;             
                     a{
-                        display: block;
-                        width: 6px;
-                        height: 6px;
+                        display:inline-block;
+                        width: 8px;
+                        height: 8px;
                         border: 1px solid #ccc;
                         border-radius: 50%;  
-    
-    
+                        background: #fff;
                     };
-                }
                     &:hover{                                      
                         border: none;
+                        background: #dfcead;
                         box-shadow:0 0 0 4px #dfcead;
                         border-radius: 50%;
-                        & a{background: #a7936e;
+                        & a{
+                            background: #a7936e;
                             border: none;
                             border-radius: 50%;
     
                         };
-                    };
-                    
+                    };   
                 }
+                                        
+            }
                 
             
         }
     #example{
         width: 100%;
-        .sec-center{
-            width: 1090px;
-            margin: 0 auto;
+        h2{
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1;
+            
         }
+        .example{
+            
+            &:nth-child(2n){
+                background: #f4f0ea;
+            }
+            &.e-1{
+                margin-top: 30px;
+                .e-head{
+                   padding-bottom: 20px;
+                    .e-head-l{
+                        float: left;
+                        width: 356px;
+                        a{
+                            display: block;
+                            h2{
+                                float: left;
+                                margin-right: 20px;
+                            }  
+                        }
+                        
+                        span{
+                            font-size: 14px;
+                            padding-top: 13px;
+                            float: left;
+                            line-height: 1;
+                        }  
+                    }
+                    .e-head-r{
+                        float: right;
+                        line-height: 1;
+                        margin-left: 30px;
+                        padding-top: 14px;
+                        cursor: pointer;
+                        font-size: 14px;
+                    }
+                }
+                .e-img{
+                    .e-img-1,.e-img-2,.e-img-3{
+                        float: left;  
+                        width: 357px;
+                        height: 320px; 
+                        position: relative;
+                        overflow: hidden;
+                        
+                        .name,.price{
+                            position: absolute;
+                            
+
+                        } 
+                        .name{
+                            width: 100%;
+                            text-align: center;
+                            margin: 48px 0 19px;
+                        }
+                        .price{
+                          display: block;
+                          border-top: solid 1px #666;
+                          padding-top: 17px   
+                        }                    
+                    }
+                    .e-img-2{
+                        margin: 0 9px;
+                    }
+                }
+
+            }
+        }
+        
+
     }
