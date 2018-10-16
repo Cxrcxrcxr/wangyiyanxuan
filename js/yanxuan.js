@@ -82,6 +82,7 @@ function Banner(){}
             btn_list : ".sowing-index li" 
         })
 
-
+//新品首发轮播图
+			
 			
 

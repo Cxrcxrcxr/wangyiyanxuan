@@ -24,14 +24,14 @@
         	<div id="sowing-map-top" class="sowing-map-top clearfix">
 				<div  class="sowing-con">
 					<ul class="clearfix">       			
-						<li><a href="#"><img src="images/pic_068.png" alt="活动 十月大促预热" /></a></li>
-						<li><a href="#"><img src="images/pic_069.png" alt="活动 秋冬秒杀周" /></a></li>
-						<li><a href="#"><img src="images/pic_070.png" alt="活动 配件10月" /></a></li>
-						<li><a href="#"><img src="images/pic_071.png" alt="活动 居家10月" /></a></li>
-						<li><a href="#"><img src="images/pic_072.png" alt="爱吃福利社 10月中" /></a></li>
-						<li><a href="#"><img src="images/pic_073.png" alt="活动 断码10月" /></a></li>
-						<li><a href="#"><img src="images/pic_074.png" alt="专题 新中式厨房" /></a></li>
-						<li><a href="#"><img src="images/pic_075.png" alt="活动 海外10月" /></a></li>        			        			
+						<li><a href="#"><img src="images/pic_138.png" alt="活动 十月大促预热" /></a></li>
+						<li><a href="#"><img src="images/pic_139.png" alt="活动 秋冬秒杀周" /></a></li>
+						<li><a href="#"><img src="images/pic_140.png" alt="活动 配件10月" /></a></li>
+						<li><a href="#"><img src="images/pic_141.png" alt="活动 居家10月" /></a></li>
+						<li><a href="#"><img src="images/pic_142.png" alt="爱吃福利社 10月中" /></a></li>
+						<li><a href="#"><img src="images/pic_143.png" alt="活动 断码10月" /></a></li>
+						<li><a href="#"><img src="images/pic_144.png" alt="专题 新中式厨房" /></a></li>
+						<li><a href="#"><img src="images/pic_145.png" alt="活动 海外10月" /></a></li>        			        			
 					</ul>
 				</div>
         		
@@ -75,7 +75,7 @@
 									<span class="newShelfTag">上新</span>
 								</div>
 								<div class="price">9.9元起</div>
-								<img src="images/pic_076.png" alt="">
+								<img src="images/pic_146.png" alt="">
 							</a>
 							<a class="e-img-2" href="#">
 								<div class="name">
@@ -83,7 +83,7 @@
 									<span class="newShelfTag">上新</span>
 								</div>
 								<div class="price">25元起</div>
-								<img src="images/pic_077.png" alt="">
+								<img src="images/pic_147.png" alt="">
 							</a>
 							<div class="e-img-3">
 								<a href="#">
@@ -91,14 +91,14 @@
 										<span>Ralph Lauren制造商</span>
 									</div>
 									<div class="price">29元起</div>
-									<img src="images/pic_078.png" alt="">
+									<img src="images/pic_148.png" alt="">
 								</a>
 								<a href="#">
 									<div class="name">
 										<span>MUJI制造商</span>
 									</div>
 									<div class="price">39.9元起</div>
-									<img src="images/pic_079.png" alt="">
+									<img src="images/pic_149.png" alt="">
 								</a>					
 								
 							</div>
@@ -114,10 +114,10 @@
 						</div>
 						<div class="n-img">
 							<div class="n-imgs">
-								<ul>
+								<ul class="clearfix">
 									<!-- <li>
 										<div class="pro-img">
-											<a href="#"><img src="images/pic_076.png" alt=""></a>
+											<a href="#"><img src="images/pic_146.png" alt=""></a>
 										</div>
 										<div class="pro-message">
 											<div class="preferential">
@@ -217,32 +217,48 @@
 		<script type="text/javascript">
 			//新品首发轮播图
 			function creatEle(pic_num){
+				var pic=true;				
             	var html="";
-            	var oUl = $(".n-imgs ul");            	
-            	for(i=0;i<40;i++){
+            	var oUl = $(".n-imgs ul");   
+				oUl.onmouseenter=function(event){
+					var target=event.target||event.srcElement;
+					pic=false;
+				};
+				oUl.onmouseleave=function(event){
+					var target=event.target||event.srcElement;
+					pic=true;
+				};
+				pic=true ? pic_num = pic_num : pic_num = pic_num +1	;         	
+            	for(i=0;i<32;i++){
+
 					oLi=`
             				<li>
 								<div class="pro-img">
-									<a href="#"><img src="images/pic_0${pic_num}.png" alt=""></a>
+									<a href="#">
+										<img src="images/pic_${pic_num}.png" alt="" class="show">
+										
+									</a>
 								</div>
 								<div class="pro-message">
-									<div class="preferential">
-										<span>配件特惠</span>
-									</div>
+									<div class="preferential"><span>配件特惠</span></div>
 									<a href="#">网易云音乐氧气蓝牙耳机青春版</a>
-									<p>
+									<p class="pro-price">
 										<span class="now-price">&yen;299</span>
 										<span class="pre-price">&yen;399</span>
 									</p>
 								</div>
 							</li>            	            	
-            		`;
-            		pic_num ++;
-            		html+=oLi;
+            		`;	
+						
+            		pic_num +=2;					
+					html+=oLi;					
             	};
             	oUl.html(html);
-            };
-			creatEle(80);
+				
+            };			
+			creatEle(150);		
+			
+
 		</script>
 		<script src="js/yanxuan.js"></script>
 	</body>
