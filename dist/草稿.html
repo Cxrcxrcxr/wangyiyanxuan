@@ -138,8 +138,142 @@
 
 					</div>
 				</div>
-				<div class="example e-2 "></div>
-				<div class="example e-3"></div>
+				<div class="example e-2 ">
+					<div class="sec-center recommend">
+						<div class="r-head e-head clearfix">
+							<div class="e-head-l r-head-l clearfix">
+								<a href="#" class="r-head-l-h2"><h2>人气推荐</h2></a>
+								<div>
+									<a href="#" class="r-head-l-a1">编辑推荐</a>
+									<a href="#" class="r-head-l-a2">热销总榜</a>
+								</div>																								
+							</div>
+							<a href="#" class="e-head-r">更多推荐 &gt;</a>
+						</div>
+						<div class="r-img clearfix">
+							<div class="r-img-l">
+								<div class="pro-img">
+									<a href="#">
+										<img src="images/pic_483.png" alt="" class="show">										
+									</a>
+								</div>
+								<div class="pro-message">									
+									<div class="preferential"><span>三石福利价</span></div>
+									<a href="#">便携手持挂烫机</a>
+									<p class="pro-price">
+										<span class="now-price">&yen;99</span>
+										<span class="pre-price">&yen;119</span>
+									</p>
+								</div>
+							</div>
+							<div class="r-img-r">
+								<div class="r-img-r-item">
+									<div class="pro-img">
+										<a href="#">
+											<img src="images/pic_484.png" alt="" class="show">										
+										</a>
+									</div>
+									<div class="pro-message">									
+										<div class="preferential"><span>特价</span></div>
+										<a href="#">升级款95%白鹅绒秋冬加厚羽绒被</a>
+										<p class="pro-price">
+											<span class="now-price">&yen;1034.1</span>
+											<span class="pre-price">&yen;1149</span>
+										</p>
+									</div>
+								</div>
+								<div class="r-img-r-item">
+									<div class="pro-img">
+										<a href="#">
+											<img src="images/pic_485.png" alt="" class="show">										
+										</a>
+									</div>
+									<div class="pro-message">									
+										<div class="preferential"><span>特价</span></div>
+										<a href="#">升级款95%白鹅绒秋冬加厚羽绒被</a>
+										<p class="pro-price">
+											<span class="now-price">&yen;1034.1</span>
+											<span class="pre-price">&yen;1149</span>
+										</p>
+									</div>
+								</div>
+								<div class="r-img-r-item">
+									<div class="pro-img">
+										<a href="#">
+											<img src="images/pic_486.png" alt="" class="show">										
+										</a>
+									</div>
+									<div class="pro-message">									
+										<div class="preferential"><span>特价</span></div>
+										<a href="#">升级款95%白鹅绒秋冬加厚羽绒被</a>
+										<p class="pro-price">
+											<span class="now-price">&yen;1034.1</span>
+											<span class="pre-price">&yen;1149</span>
+										</p>
+									</div>
+								</div>
+								<div class="r-img-r-item">
+									<div class="pro-img">
+										<a href="#">
+											<img src="images/pic_487.png" alt="" class="show">										
+										</a>
+									</div>
+									<div class="pro-message">									
+										<div class="preferential"><span>特价</span></div>
+										<a href="#">升级款95%白鹅绒秋冬加厚羽绒被</a>
+										<p class="pro-price">
+											<span class="now-price">&yen;1034.1</span>
+											<span class="pre-price">&yen;1149</span>
+										</p>
+									</div>
+								</div>
+								<div class="r-img-r-item">
+									<div class="pro-img">
+										<a href="#">
+											<img src="images/pic_488.png" alt="" class="show">										
+										</a>
+									</div>
+									<div class="pro-message">									
+										<div class="preferential"><span>特价</span></div>
+										<a href="#">升级款95%白鹅绒秋冬加厚羽绒被</a>
+										<p class="pro-price">
+											<span class="now-price">&yen;1034.1</span>
+											<span class="pre-price">&yen;1149</span>
+										</p>
+									</div>
+								</div>
+								<div class="r-img-r-item">
+									<div class="pro-img">
+										<a href="#">
+											<img src="images/pic_489.png" alt="" class="show">										
+										</a>
+									</div>
+									<div class="pro-message">									
+										<div class="preferential"><span>特价</span></div>
+										<a href="#">升级款95%白鹅绒秋冬加厚羽绒被</a>
+										<p class="pro-price">
+											<span class="now-price">&yen;1034.1</span>
+											<span class="pre-price">&yen;1149</span>
+										</p>
+									</div>
+								</div>								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="example e-3">
+					<div class="sec-center time-limit">
+						<div class="t-head e-head clearfix">
+							<div class="e-head-l t-head-l clearfix">
+								<a href="#" class="t-head-l-h2"><h2>限时购</h2></a>																																
+							</div>
+							<a href="#" class="e-head-r">更多抢购 &gt;</a>
+						</div>
+
+
+
+					</div>												
+				</div>
 				<div class="example e-4"></div>
         	</div>        	
         	<!--
@@ -216,27 +350,17 @@
 		<script src="js/jquery-2.1.0.js"></script>
 		<script type="text/javascript">
 			//新品首发轮播图
-			function creatEle(pic_num){
-				var pic=true;				
+			function creatEle(pic_num,pic){				
             	var html="";
-            	var oUl = $(".n-imgs ul");   
-				oUl.onmouseenter=function(event){
-					var target=event.target||event.srcElement;
-					pic=false;
-				};
-				oUl.onmouseleave=function(event){
-					var target=event.target||event.srcElement;
-					pic=true;
-				};
-				pic=true ? pic_num = pic_num : pic_num = pic_num +1	;         	
+            	var oUl = $(".n-imgs ul");  
+				pic=true?pic_num=pic_num:pic_num=pic_num+1;									
             	for(i=0;i<32;i++){
 
 					oLi=`
             				<li>
 								<div class="pro-img">
 									<a href="#">
-										<img src="images/pic_${pic_num}.png" alt="" class="show">
-										
+										<img src="images/pic_${pic_num}.png" alt="" class="show">										
 									</a>
 								</div>
 								<div class="pro-message">
@@ -255,10 +379,13 @@
             	};
             	oUl.html(html);
 				
-            };			
-			creatEle(150);		
+            };					
 			
-
+			
+			$(".n-imgs li").on({
+				"mouseenter":creatEle(150,false),
+				"mouseleave":creatEle(150,true)
+			})
 		</script>
 		<script src="js/yanxuan.js"></script>
 	</body>

@@ -15,6 +15,12 @@ section {
     color: #333; }
     section a:hover {
       color: #b4a078; }
+  section h2 {
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    margin-right: 20px; }
   section button {
     display: block;
     width: 50px;
@@ -37,6 +43,36 @@ section {
   section .sec-center {
     width: 1090px;
     margin: 0 auto; }
+  section .pro-message .preferential {
+    width: auto;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    padding: 0 5px;
+    margin-bottom: 3px; }
+    section .pro-message .preferential span {
+      background: #e36844;
+      font-size: 14px; }
+  section .pro-message a {
+    display: block;
+    width: 100%;
+    margin-bottom: 4px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold; }
+  section .pro-message .pro-price {
+    text-align: center; }
+    section .pro-message .pro-price .now-price {
+      font-size: 13px;
+      color: #d4282d; }
+    section .pro-message .pro-price .pre-price {
+      font-size: 12px;
+      color: #999;
+      text-decoration: line-through;
+      margin-left: 6px; }
 
 .sowing-map-top {
   width: 100%;
@@ -92,36 +128,31 @@ section {
 
 #example {
   width: 100%; }
-  #example h2 {
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 1; }
+  #example .e-head {
+    padding-bottom: 20px; }
+    #example .e-head .e-head-l {
+      float: left; }
+    #example .e-head .e-head-r {
+      float: right;
+      line-height: 1;
+      padding-top: 14px;
+      cursor: pointer;
+      font-size: 14px; }
   #example .example:nth-child(2n) {
     background: #f4f0ea; }
   #example .example.e-1 {
     margin-top: 30px; }
-    #example .example.e-1 .e-head {
-      padding-bottom: 20px; }
-      #example .example.e-1 .e-head .e-head-l {
+    #example .example.e-1 .e-head .e-head-l {
+      width: 356px; }
+      #example .example.e-1 .e-head .e-head-l a {
+        display: block; }
+        #example .example.e-1 .e-head .e-head-l a h2 {
+          float: left; }
+      #example .example.e-1 .e-head .e-head-l span {
+        font-size: 14px;
+        padding-top: 13px;
         float: left;
-        width: 356px; }
-        #example .example.e-1 .e-head .e-head-l a {
-          display: block; }
-          #example .example.e-1 .e-head .e-head-l a h2 {
-            float: left;
-            margin-right: 20px; }
-        #example .example.e-1 .e-head .e-head-l span {
-          font-size: 14px;
-          padding-top: 13px;
-          float: left;
-          line-height: 1; }
-      #example .example.e-1 .e-head .e-head-r {
-        float: right;
-        line-height: 1;
-        margin-left: 30px;
-        padding-top: 14px;
-        cursor: pointer;
-        font-size: 14px; }
+        line-height: 1; }
     #example .example.e-1 .e-img .e-img-1, #example .example.e-1 .e-img .e-img-2, #example .example.e-1 .e-img .e-img-3 {
       float: left;
       width: 357px;
@@ -179,7 +210,8 @@ section {
       #example .example.e-1 .new-products .to-right {
         right: -60px; }
       #example .example.e-1 .new-products .n-img {
-        width: 1090px; }
+        width: 1090px;
+        overflow: hidden; }
         #example .example.e-1 .new-products .n-img .n-imgs {
           width: 8800px; }
           #example .example.e-1 .new-products .n-img .n-imgs ul {
@@ -188,50 +220,97 @@ section {
               width: 265px;
               height: 344px;
               float: left;
-              margin-right: 10px;
-              position: relative; }
+              margin-right: 10px; }
               #example .example.e-1 .new-products .n-img .n-imgs ul li .pro-img {
                 margin-bottom: 8px; }
                 #example .example.e-1 .new-products .n-img .n-imgs ul li .pro-img a {
-                  display: block;
-                  position: relative; }
+                  display: block; }
                   #example .example.e-1 .new-products .n-img .n-imgs ul li .pro-img a img.show {
                     display: block; }
                   #example .example.e-1 .new-products .n-img .n-imgs ul li .pro-img a img.active {
                     display: none; }
-              #example .example.e-1 .new-products .n-img .n-imgs ul li .pro-message .preferential {
-                width: auto;
-                height: 20px;
-                line-height: 20px;
-                text-align: center;
-                color: #fff;
-                padding: 0 5px;
-                margin-bottom: 3px; }
-                #example .example.e-1 .new-products .n-img .n-imgs ul li .pro-message .preferential span {
-                  background: #e36844;
-                  font-size: 14px; }
-              #example .example.e-1 .new-products .n-img .n-imgs ul li .pro-message a {
-                display: block;
-                width: 100%;
-                margin-bottom: 4px;
-                height: 20px;
-                line-height: 20px;
-                text-align: center;
-                font-size: 14px;
-                font-weight: bold; }
-              #example .example.e-1 .new-products .n-img .n-imgs ul li .pro-message .pro-price {
-                text-align: center; }
-                #example .example.e-1 .new-products .n-img .n-imgs ul li .pro-message .pro-price .now-price {
-                  font-size: 13px;
-                  color: #d4282d; }
-                #example .example.e-1 .new-products .n-img .n-imgs ul li .pro-message .pro-price .pre-price {
-                  font-size: 12px;
-                  color: #999;
-                  text-decoration: line-through;
-                  margin-left: 6px; }
               #example .example.e-1 .new-products .n-img .n-imgs ul li:hover {
                 background: #f4f0ea; }
                 #example .example.e-1 .new-products .n-img .n-imgs ul li:hover img.show {
                   display: none; }
                 #example .example.e-1 .new-products .n-img .n-imgs ul li:hover img.active {
                   display: block; }
+  #example .example.e-2 {
+    width: 100%;
+    padding: 60px; }
+    #example .example.e-2 .recommend {
+      height: 578px; }
+      #example .example.e-2 .recommend .r-head-l {
+        width: 390px;
+        height: 100%; }
+        #example .example.e-2 .recommend .r-head-l div {
+          display: inline-block;
+          padding-left: 13px;
+          width: 250px;
+          height: 28px;
+          line-height: 28px; }
+          #example .example.e-2 .recommend .r-head-l div a {
+            display: inline-block;
+            height: 100%;
+            padding-bottom: 2px;
+            margin-right: 55px;
+            border-bottom: 2px solid #b4a078;
+            font-size: 14px; }
+      #example .example.e-2 .recommend .r-img {
+        width: 100%;
+        height: 530px; }
+        #example .example.e-2 .recommend .r-img .r-img-l {
+          background: #fff;
+          width: 390px;
+          height: 100%;
+          float: left; }
+          #example .example.e-2 .recommend .r-img .r-img-l .pro-img {
+            border-bottom: 1px solid #F4F0EA;
+            margin-bottom: 18px; }
+            #example .example.e-2 .recommend .r-img .r-img-l .pro-img img {
+              display: block;
+              border: 1px;
+              margin: 40px 35px; }
+          #example .example.e-2 .recommend .r-img .r-img-l .pro-message .preferential {
+            margin-bottom: 10px; }
+          #example .example.e-2 .recommend .r-img .r-img-l .pro-message a {
+            display: inline-block;
+            font-size: 18px;
+            margin-bottom: 13px; }
+          #example .example.e-2 .recommend .r-img .r-img-l .pro-message .now-price {
+            font-size: 18px; }
+          #example .example.e-2 .recommend .r-img .r-img-l .pro-message .pre-price {
+            font-size: 14px; }
+        #example .example.e-2 .recommend .r-img .r-img-r {
+          width: 699px;
+          height: 100%;
+          overflow: hidden;
+          float: right; }
+          #example .example.e-2 .recommend .r-img .r-img-r .r-img-r-item {
+            background: #fff;
+            width: 223px;
+            height: 260px;
+            margin: 0 0 10px 10px;
+            float: left; }
+            #example .example.e-2 .recommend .r-img .r-img-r .r-img-r-item .pro-img {
+              border-bottom: 1px solid #F4F0EA;
+              margin-bottom: 8px; }
+              #example .example.e-2 .recommend .r-img .r-img-r .r-img-r-item .pro-img img {
+                display: block;
+                border: 1px;
+                margin: 0 auto; }
+            #example .example.e-2 .recommend .r-img .r-img-r .r-img-r-item .pro-message .preferential {
+              margin-bottom: 4px; }
+            #example .example.e-2 .recommend .r-img .r-img-r .r-img-r-item .pro-message a {
+              display: inline-block;
+              font-size: 14px;
+              margin-bottom: 3px; }
+            #example .example.e-2 .recommend .r-img .r-img-r .r-img-r-item .pro-message .now-price {
+              font-size: 13px; }
+            #example .example.e-2 .recommend .r-img .r-img-r .r-img-r-item .pro-message .pre-price {
+              font-size: 12px; }
+  #example .example.e-3 {
+    width: 100%;
+    padding: 58px; }
+    #example .example.e-3 .time-limit {
+      height: 483px; }
