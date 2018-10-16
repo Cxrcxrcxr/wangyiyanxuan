@@ -1,3 +1,6 @@
+
+//大轮播图
+
 function Banner(){}
         $.extend(Banner.prototype,{
             init: function(options){
@@ -71,9 +74,7 @@ function Banner(){}
                clearInterval(this.autoTimer)    
             }
         })
-
         var banner = new Banner();
-
         banner.init({
             item_list : ".sowing-con li",
             left_btn : ".to-left",
@@ -81,4 +82,6 @@ function Banner(){}
             btn_list : ".sowing-index li" 
         })
 
+
+			
 

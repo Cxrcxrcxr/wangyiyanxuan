@@ -15,6 +15,25 @@ section {
     color: #333; }
     section a:hover {
       color: #b4a078; }
+  section button {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: #D0C4AF;
+    position: absolute;
+    top: 200px !important;
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #fff; }
+    section button.to-left {
+      float: left;
+      left: 186.5px; }
+    section button.to-right {
+      float: right;
+      right: 186.5px; }
+    section button:hover {
+      background: #B19E7A; }
   section .sec-center {
     width: 1090px;
     margin: 0 auto; }
@@ -39,25 +58,6 @@ section {
           display: block;
           width: 100%;
           height: 100%; }
-  .sowing-map-top button {
-    display: block;
-    width: 50px;
-    height: 50px;
-    background: #D0C4AF;
-    position: absolute;
-    top: 200px !important;
-    border: none;
-    border-radius: 50%;
-    font-size: 30px;
-    color: #fff; }
-    .sowing-map-top button.to-left {
-      float: left;
-      left: 186.5px; }
-    .sowing-map-top button.to-right {
-      float: right;
-      right: 186.5px; }
-    .sowing-map-top button:hover {
-      background: #B19E7A; }
   .sowing-map-top .sowing-index {
     margin-left: 50%;
     height: 28px;
@@ -127,16 +127,46 @@ section {
       width: 357px;
       height: 320px;
       position: relative;
-      overflow: hidden; }
+      overflow: hidden;
+      text-align: center; }
       #example .example.e-1 .e-img .e-img-1 .name, #example .example.e-1 .e-img .e-img-1 .price, #example .example.e-1 .e-img .e-img-2 .name, #example .example.e-1 .e-img .e-img-2 .price, #example .example.e-1 .e-img .e-img-3 .name, #example .example.e-1 .e-img .e-img-3 .price {
         position: absolute; }
       #example .example.e-1 .e-img .e-img-1 .name, #example .example.e-1 .e-img .e-img-2 .name, #example .example.e-1 .e-img .e-img-3 .name {
+        z-index: 3;
         width: 100%;
         text-align: center;
-        margin: 48px 0 19px; }
+        margin: 48px 0 19px;
+        font-size: 24px; }
+        #example .example.e-1 .e-img .e-img-1 .name .newShelfTag, #example .example.e-1 .e-img .e-img-2 .name .newShelfTag, #example .example.e-1 .e-img .e-img-3 .name .newShelfTag {
+          position: absolute;
+          top: -3px;
+          font-size: 11px;
+          margin-left: 2px;
+          text-align: center;
+          line-height: 19px;
+          width: 32px;
+          height: 21px;
+          border-radius: 10px;
+          color: #fff;
+          background: #B19E7A; }
       #example .example.e-1 .e-img .e-img-1 .price, #example .example.e-1 .e-img .e-img-2 .price, #example .example.e-1 .e-img .e-img-3 .price {
-        display: block;
+        display: inline-block;
+        width: auto;
         border-top: solid 1px #666;
-        padding-top: 17px; }
+        padding-top: 17px;
+        top: 91px;
+        left: 154.6px; }
     #example .example.e-1 .e-img .e-img-2 {
       margin: 0 9px; }
+    #example .example.e-1 .e-img .e-img-3 a {
+      display: block;
+      position: relative; }
+      #example .example.e-1 .e-img .e-img-3 a:last-child {
+        margin-top: 9px; }
+    #example .example.e-1 .e-img .e-img-3 .name {
+      font-size: 20px;
+      margin: 32px 0 10px 20px;
+      text-align: left; }
+    #example .example.e-1 .e-img .e-img-3 .price {
+      left: 20px;
+      top: 62px; }

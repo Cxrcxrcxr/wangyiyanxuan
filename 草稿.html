@@ -105,6 +105,36 @@
 						</div>
 					</div>
 					<div class="new-products">
+						<div class="e-head  clearfix">
+							<div class="e-head-l clearfix">
+								<a href="#"><h2>新品首发</h2></a>
+								<span>为你寻觅世间好物</span>
+							</div>
+							<a href="#" class="e-head-r">更多新品 &gt;</a>
+						</div>
+						<div class="n-img">
+							<div class="n-imgs">
+								<ul>
+									<!-- <li>
+										<div class="pro-img">
+											<a href="#"><img src="images/pic_076.png" alt=""></a>
+										</div>
+										<div class="pro-message">
+											<div class="preferential">
+												<span>配件特惠</span>
+											</div>
+											<a href="#">网易云音乐氧气蓝牙耳机青春版</a>
+											<p>
+												<span class="now-price">&yen;299</span>
+												<span class="pre-price">&yen;399</span>
+											</p>
+										</div>
+									</li> -->
+								</ul>
+							</div>
+							<button class="to-left">&lt;</button>
+    						<button class="to-right">&gt;</button>
+						</div>
 
 					</div>
 				</div>
@@ -182,8 +212,38 @@
 		        				
 		<footer></footer>		
 		<!-- <script src="js/json-data.js"></script>
-		<script type="text/javascript" src="js/window.js" ></script> -->
+		<script type="text/javascript" src="js/window.js" ></script> -->		
 		<script src="js/jquery-2.1.0.js"></script>
+		<script type="text/javascript">
+			//新品首发轮播图
+			function creatEle(pic_num){
+            	var html="";
+            	var oUl = $(".n-imgs ul");            	
+            	for(i=0;i<40;i++){
+					oLi=`
+            				<li>
+								<div class="pro-img">
+									<a href="#"><img src="images/pic_0${pic_num}.png" alt=""></a>
+								</div>
+								<div class="pro-message">
+									<div class="preferential">
+										<span>配件特惠</span>
+									</div>
+									<a href="#">网易云音乐氧气蓝牙耳机青春版</a>
+									<p>
+										<span class="now-price">&yen;299</span>
+										<span class="pre-price">&yen;399</span>
+									</p>
+								</div>
+							</li>            	            	
+            		`;
+            		pic_num ++;
+            		html+=oLi;
+            	};
+            	oUl.html(html);
+            };
+			creatEle(80);
+		</script>
 		<script src="js/yanxuan.js"></script>
 	</body>
 </html>

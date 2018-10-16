@@ -17,6 +17,22 @@ body{min-height: 100%;
                 color:#b4a078;
             }
         }
+        button{
+            display: block;                   
+            width: 50px;
+            height:50px;
+            background: #D0C4AF;
+            position: absolute;
+            
+            top: 200px!important;
+            border: none;
+            border-radius: 50%;
+            font-size: 30px;
+            color:#fff;
+            &.to-left{float: left;left: 186.5px;};
+            &.to-right{float: right;right: 186.5px;};
+            &:hover{background: #B19E7A;}
+        }
         .sec-center{
             width: 1090px;
             margin: 0 auto;
@@ -49,22 +65,7 @@ body{min-height: 100%;
 			
 		
 		}
-        button{
-            display: block;                   
-            width: 50px;
-            height:50px;
-            background: #D0C4AF;
-            position: absolute;
-            
-            top: 200px!important;
-            border: none;
-            border-radius: 50%;
-            font-size: 30px;
-            color:#fff;
-            &.to-left{float: left;left: 186.5px;};
-            &.to-right{float: right;right: 186.5px;};
-            &:hover{background: #B19E7A;}
-        }
+        
         .sowing-index{
             margin-left:50%;
             height: 28px;
@@ -158,30 +159,73 @@ body{min-height: 100%;
                         height: 320px; 
                         position: relative;
                         overflow: hidden;
-                        
+                        text-align: center;
                         .name,.price{
                             position: absolute;
                             
 
                         } 
                         .name{
+                            z-index: 3;
                             width: 100%;
                             text-align: center;
                             margin: 48px 0 19px;
+                            font-size: 24px;
+                            .newShelfTag{
+                                position: absolute;
+                                top: -3px;
+                                font-size: 11px;
+                                margin-left: 2px;
+                                text-align: center;
+                                line-height: 19px;
+                                width: 32px;
+                                height: 21px;
+                                border-radius: 10px;
+                                color: #fff;
+                                background: #B19E7A;
+                            }
                         }
-                        .price{
-                          display: block;
-                          border-top: solid 1px #666;
-                          padding-top: 17px   
-                        }                    
+                        .price{ 
+                            display: inline-block;                       
+                            width: auto;
+                            border-top: solid 1px #666;
+                            padding-top: 17px ; 
+                            top:91px;
+                            left: 154.6px;
+                        }   
+
                     }
                     .e-img-2{
                         margin: 0 9px;
+                    }                      
+                
+                    .e-img-3{
+                        a{
+                            display: block;
+                            position: relative;
+                            &:last-child{margin-top: 9px;}
+                        }
+                        
+                        .name{
+                            font-size: 20px;
+                            margin: 32px 0 10px 20px;
+                            text-align: left;
+                        }
+                        .price{
+                            left:20px;
+                            top: 62px;
+                        }
+
                     }
                 }
-
+                
             }
+                    
+
         }
-        
 
     }
+   
+        
+
+    
