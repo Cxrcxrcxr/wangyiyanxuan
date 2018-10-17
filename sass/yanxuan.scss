@@ -12,10 +12,14 @@ body{min-height: 100%;
     section{
         width: 100%;
         a{
+            font-size: 14px;
             color: #333;
             &:hover{
                 color:#b4a078;
             }
+        }
+        span{
+            font-size: 14px;
         }
         h2{
             display: inline-block;
@@ -55,7 +59,6 @@ body{min-height: 100%;
                 margin-bottom: 3px;
                 span{
                     background:#e36844;
-                    font-size: 14px;
                 }
             }
             a{
@@ -65,7 +68,6 @@ body{min-height: 100%;
                 height: 20px;
                 line-height: 20px;
                 text-align: center;
-                font-size: 14px;
                 font-weight: bold;
             }
             .pro-price{
@@ -84,7 +86,27 @@ body{min-height: 100%;
         
             
         }
-        
+        .e-img{
+            img{
+                transition: all 1s;
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
+        }
+        .e-head{
+            padding-bottom: 20px;
+            .e-head-l{
+                float: left;
+            }
+            .e-head-r{
+                float: right;
+                line-height: 1;
+                padding-top: 14px;
+                cursor: pointer;
+                font-size: 14px;
+            }
+        }
     }
     .sowing-map-top{
     	width: 100%;
@@ -112,7 +134,6 @@ body{min-height: 100%;
         
     
     }
-    
     .sowing-index{
         width: 100%;
         height: 28px;
@@ -150,24 +171,10 @@ body{min-height: 100%;
                 };   
             }
                                     
-        }
+    }
+
     #example{
-        width: 100%;
-        .e-head{
-            padding-bottom: 20px;
-            .e-head-l{
-                float: left;
-            }
-            .e-head-r{
-                float: right;
-                line-height: 1;
-                
-                padding-top: 14px;
-                cursor: pointer;
-                font-size: 14px;
-            }
-        }
-        
+        width: 100%;        
         .example{
             
             &:nth-child(2n){
@@ -189,7 +196,6 @@ body{min-height: 100%;
                         }
                         
                         span{
-                            font-size: 14px;
                             padding-top: 13px;
                             float: left;
                             line-height: 1;
@@ -237,6 +243,7 @@ body{min-height: 100%;
                             padding-top: 17px ; 
                             top:91px;
                             left: 154.6px;
+                            z-index: 5;
                         }   
 
                     }
@@ -263,6 +270,11 @@ body{min-height: 100%;
 
                     }
                 }
+                .brand{
+                    a:hover{
+                        color: #333;
+                    }
+                }
                 .new-products{
                     height: 510px;
                     padding-top: 60px;
@@ -280,29 +292,32 @@ body{min-height: 100%;
                             width: 8800px;
                             ul{
                                 width: 100%;
-                                li{
+                                li{    
                                     width: 265px;
                                     height: 344px;
                                     float: left;
-                                    margin-right: 10px;                                    
+                                    margin-right: 10px;                                  
                                     .pro-img{
                                         margin-bottom: 8px;
+                                        position: relative; 
+                                        height: 265px;
+                                        overflow: hidden;
                                         a{
+                                            position: absolute;
                                             display: block;
-                                            img{                                                
-                                                &.show{display: block;}
-                                                &.active{display:none;}
+                                            height: 100%;
+                                            width: 200%;
+                                            left: 0;
+                                            img{                                            
+                                               float: left; 
                                             }
-                                        }
-                                        
-                                    }
-                                    
-                                   
-                                    
+                                        }    
+                                    }     
                                     &:hover{
                                         background: #f4f0ea;
-                                        img.show{display: none;}
-                                        img.active{display: block;}
+                                        a{
+                                            left: -265px;
+                                        }    
                                     }
                                 }
                             }
@@ -400,7 +415,6 @@ body{min-height: 100%;
                                     }
                                     a{
                                         display: inline-block;
-                                        font-size: 14px;
                                         margin-bottom: 3px;
                                     }
                                     .now-price{
@@ -554,7 +568,6 @@ body{min-height: 100%;
                                     }
                                     .s-2{
                                         height: 14px;
-                                        font-size: 14px;
                                         color: #999;
                                         line-height: 14px;
                                     }
@@ -781,15 +794,68 @@ body{min-height: 100%;
                                     a{
                                         color: #333;
                                     }
-                                }
-                                &.module-1{
-
-                                    .moduleHd{
-                                        padding: 19px 0 12px;
-                                        
-                                    }
+                                }                            
+                                .moduleHd{
+                                    padding: 19px 0 12px;
                                     
                                 }
+                                .moduleBd{
+                                    .item{
+                                        position: relative;
+                                        width: 200px;
+                                        margin-bottom: 20px;
+                                        font-size: 14px;
+                                        &:last-child{
+                                            margin-bottom: 0;
+                                        }
+                                        .hd{
+                                            width: 50px;
+                                            height: 50px;
+                                            margin-right: 20px;
+                                            background-color: #FBF9F6;
+                                            float: left;
+                                            a,img{
+                                                display: block;
+                                                width: 100%;
+                                            }
+                                        }
+                                        .bd{
+                                            float: left;
+                                            .name{
+                                                max-width: 130px;
+                                                margin: 4px 0 14px;
+                                                overflow: hidden;
+                                                white-space: nowrap;
+                                                text-overflow: ellipsis;
+                                            }
+                                            .price{
+                                                .limitPrice{
+                                                    color: #BE4141;
+                                                }
+                                                .counterPrice{
+                                                    color: #999;
+                                                    text-decoration: line-through;
+                                                }
+                                            }
+                                            .cart-salecart{
+                                                position: absolute;
+                                                right: 0;
+                                                bottom: 0;
+                                                background-image: -webkit-image-set(url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-web/p/20150730/style/img/x1/cart-s0ad41292b3-851852ecbd.png) 1x,url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-web/p/20150730/style/img/x2/cart-s3de4c641d1-9d6deeea50.png) 2x);
+                                                background-repeat: no-repeat;
+                                                background-position: 0 -157px;
+                                                height: 24px;
+                                                width: 24px;
+                                                display: inline-block;
+                                                overflow: hidden;
+                                                vertical-align: top;
+                                            }
+                                            
+                                        }
+                                    }
+                                }
+                                    
+                                
 
                             }
                         }
@@ -802,7 +868,42 @@ body{min-height: 100%;
         }
 
     }
-   
+
+    #nav-details{
+        width: 100%;
+        height: 7890px;
+        margin-top: 60px;
+        .nav-details-itme{
+            .n-head-r{
+                p{
+                    float: left;
+                    &.n-head-r-p2{
+                        margin-left: 30px;
+                    }
+                }
+                
+            }
+            .n-big-img{
+                display: block;
+                margin-bottom: 20px;
+                img{
+                    display: block;
+                }
+            }
+            .n-img{
+                height: 411px;
+                overflow: hidden;
+                .n-img-item{
+                    float: left;
+                    margin: 0 10px 50px 0;
+                    width: 265px;
+                    .pro-img{
+                        background-color: #f4f4f4;
+                    }                  
+                }
+            }
+        }
+    }
         
 
     
