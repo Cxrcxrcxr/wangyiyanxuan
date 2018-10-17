@@ -93,7 +93,6 @@ body{min-height: 100%;
         position: relative;        
     }
     .sowing-con{
-        display: block;
         width: 100%;
         height: 100%;
         position: relative;           
@@ -115,19 +114,18 @@ body{min-height: 100%;
     }
     
     .sowing-index{
-        margin-left:50%;
+        width: 100%;
         height: 28px;
         position: absolute;
-        left: -96px;
+        text-align: center;
         z-index: 10; 
         bottom:4px ;
         
             li{
-                display:block;
+                display:inline-block;
                 width: 12px;  
                 height: 12px;            
-                margin: 0 8px 10px;
-                float: left;                     
+                margin: 0 8px 10px;                     
                 text-align: center;
                 line-height: 10px;             
                 a{
@@ -606,16 +604,195 @@ body{min-height: 100%;
                 height: 526px;
                 padding: 54px 0 52px;
                 .welfare{
-
+                    
                     .w-img{
-
+                        background: #fff;
                         .w-img-l{
-                            width: 100%;
-                            height: 420px;
-                            overflow: hidden;
-                            position: relative; 
-                        }
 
+                            width: 224px;
+                            height: 376px;
+                            overflow: hidden;
+                            position: relative;
+                            float: left; 
+                            &:hover{
+                                button{
+                                    display: block!important;
+                                }  
+                            }
+                            .sowing-con{
+                                width: 100%;
+                                height: 100%;
+                                position: relative;
+                                ul{
+                                    position: absolute;
+                                    width: 400%;
+                                    height: 100%; 
+                                    li{
+                                        float: left;
+                                        img{
+                                            display: block;
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                            button{
+                                width: 30px;
+                                height: 30px;
+                                display: none!important;
+                                top: 158px!important;
+                                font-size: 14px;
+                                &.to-left{
+                                    left: 10px;
+                                }                                
+                                &.to-right{
+                                    right: 10px;
+                                }  
+                            }
+                            
+                        }
+                        .w-img-c{
+                            float: left;
+                            width: 624px;
+                            height: 376px;
+                            padding: 0 17px 0 19px;
+                            .moduleHd{
+                                font-size: 18px;
+                                border-bottom: 1px solid #F4F0EA;
+                                padding: 19px 0 12px;
+                                .lt{
+                                    font-size: 16px;
+                                    float: left;
+                                }
+                                .rt{
+                                    float: right;
+                                    color: #999;
+                                    font-size: 12px;
+                                    cursor: pointer;
+                                    margin-top: 6px;
+                                }
+                            }
+                            .moduleBd{
+                                margin-top: 20px;
+                                margin-right: -20px;
+                                .item{
+                                    position: relative;
+                                    width: 284px;
+                                    margin: 0 20px 20px 0;
+                                    font-size: 14px;
+                                    float: left;
+
+                                    .hd{
+                                        position: relative;
+                                        width: 130px;
+                                        height: 130px;
+                                        margin-right: 10px;
+                                        background-color: #FBF9F6;
+                                        float: left;
+                                        a,img{
+                                            display: block;
+                                        }
+                                        .discount{
+                                            position: absolute;
+                                            right: 10px;
+                                            bottom: 10px;
+                                            width: 38px;
+                                            height: 38px;
+                                            text-align: center;
+                                            line-height: 38px;
+                                            border-radius: 100%;
+                                            color: #fff;
+                                            background-color: #F78D33;
+                                            font-size: 12px;
+                                            .num{
+                                                font-size: 16px;
+                                            }
+                                        }
+                                        
+                                    }
+                                    .bd{
+                                        float: left;
+                                        .name{
+                                            max-width: 130px;
+                                            max-height: 40px;
+                                            overflow: hidden;
+                                            margin-top: 8px;
+                                            font-size: 14px;
+                                            line-height: 20px;                                      
+                                        }
+                                        .limitPrice{
+                                            color: #BE4141;
+                                            font-size: 14px;
+                                            .yen{
+                                                font-size: 12px;
+                                                vertical-align: -2px;
+                                            }
+                                            .num{
+                                                vertical-align: -2px;
+                                                font-size: 20px;
+                                                font-weight: 700;
+                                            }
+                                        }
+                                        .counterPrice{
+                                            margin-top: 2px;
+                                            color: #A4A4A4;
+                                            .num{
+                                                text-decoration: line-through;
+                                            }
+                                        }
+                                        .w-button{
+                                            position: absolute;
+                                            bottom: 8px;
+                                            width: 90px;
+                                            line-height: 26px;
+                                            text-align: center;
+                                            background-color: #BE4141;
+                                            border: 1px solid #D25A5A;
+                                            border-radius: 2px;  
+                                            &:hover{
+                                                background: #da4f4f;
+                                            }
+                                            a{
+                                                color: #fff;
+                                            }                                          
+                                        }                                       
+                                    }
+                                }
+                            }
+                            
+                           
+                        }
+                        .w-img-r{
+                            width: 242px;
+                            float: left;
+                            padding: 0 20px 0 22px;
+                            border-left:1px solid #F4F0EA;
+                            .module{
+                                height: 188px;
+                                .lt{
+                                    font-size: 16px;
+                                    float: left;
+                                }
+                                .rt{
+                                    float: right;
+                                    font-size: 12px;
+                                    cursor: pointer;
+                                    margin-top: 6px;
+                                    a{
+                                        color: #333;
+                                    }
+                                }
+                                &.module-1{
+
+                                    .moduleHd{
+                                        padding: 19px 0 12px;
+                                        
+                                    }
+                                    
+                                }
+
+                            }
+                        }
                     }
 
                 }
