@@ -83,6 +83,45 @@ function Banner(){}
         })
 
 //新品首发轮播图
-			
+
+
+
+// 限时购  倒计时
+function countDown(){
+    var d2 = new Date("2018/10/25 22:00:00")
+    function time(){
+        var d =new Date() 
+        var  a = (d2.getTime()-d.getTime()) / 1000;
+        if(a > 0){
+            var nDay = parseInt(a /(60*60*24));
+            var nHour = parseInt((a / (60*60)) % 24);
+            var nMinute = parseInt((a / 60) % 60);
+            var nSecond = parseInt(a % 60)
+            if(nDay < 10){
+                    nDay = "0" + nDay;
+            }
+            if(nHour < 10){
+                    nHour = "0" + nHour;
+            }
+            if(nMinute < 10){
+                nMinute = "0" + nMinute;
+            }
+            if(nSecond < 10){
+                nSecond = "0" + nSecond;
+            }
+            hour.innerHTML = nHour
+            minute.innerHTML = nMinute
+            second.innerHTML = nSecond
+        }else{
+            alert("活动结束")
+        }
+    }
+    setInterval(function(){
+            time()
+    }, 1000)
+    time();
+};
+countDown()
+
 			
 

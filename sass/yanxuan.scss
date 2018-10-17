@@ -90,70 +90,68 @@ body{min-height: 100%;
     	width: 100%;
     	height: 420px;
         overflow: hidden;
-        position: relative;
-		.sowing-con{
-            display: block;
-            width: 100%;
-            height: 100%;
-            position: relative;           
-            ul{
-                position: absolute;
-                width:800%;
-                height:100% ;
-                li{                    
-                    float: left;
-                    img{
-                        display: block;
-                        width: 100%;
-                        height: 100%;
-                    }
-                } 
-            }
-			
-		
-		}
-        
-        .sowing-index{
-            margin-left:50%;
-            height: 28px;
+        position: relative;        
+    }
+    .sowing-con{
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;           
+        ul{
             position: absolute;
-            left: -96px;
-            z-index: 10; 
-            bottom:4px ;
-            
-                li{
-                    display:block;
-                    width: 12px;  
-                    height: 12px;            
-                    margin: 0 8px 10px;
-                    float: left;                     
-                    text-align: center;
-                    line-height: 10px;             
-                    a{
-                        display:inline-block;
-                        width: 8px;
-                        height: 8px;
-                        border: 1px solid #ccc;
-                        border-radius: 50%;  
-                        background: #fff;
-                    };
-                    &:hover{                                      
-                        border: none;
-                        background: #dfcead;
-                        box-shadow:0 0 0 4px #dfcead;
-                        border-radius: 50%;
-                        & a{
-                            background: #a7936e;
-                            border: none;
-                            border-radius: 50%;
-    
-                        };
-                    };   
+            width:800%;
+            height:100% ;
+            li{                    
+                float: left;
+                img{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
                 }
-                                        
+            } 
+        }
+        
+    
+    }
+    
+    .sowing-index{
+        margin-left:50%;
+        height: 28px;
+        position: absolute;
+        left: -96px;
+        z-index: 10; 
+        bottom:4px ;
+        
+            li{
+                display:block;
+                width: 12px;  
+                height: 12px;            
+                margin: 0 8px 10px;
+                float: left;                     
+                text-align: center;
+                line-height: 10px;             
+                a{
+                    display:inline-block;
+                    width: 8px;
+                    height: 8px;
+                    border: 1px solid #ccc;
+                    border-radius: 50%;  
+                    background: #fff;
+                };
+                &:hover{                                      
+                    border: none;
+                    background: #dfcead;
+                    box-shadow:0 0 0 4px #dfcead;
+                    border-radius: 50%;
+                    & a{
+                        background: #a7936e;
+                        border: none;
+                        border-radius: 50%;
+
+                    };
+                };   
             }
-                
-            
+                                    
         }
     #example{
         width: 100%;
@@ -430,8 +428,200 @@ body{min-height: 100%;
                 padding: 58px;
                 .time-limit{
                     height: 483px;
+                    .t-img{
+                        height: 377px;
+                    }
+                    .t-img-l{
+                        width: 224px;
+                        height: 100%;
+                        padding-top: 60px;
+                        background: url(//yanxuan.nosdn.127.net/c9aeb62a3f79123d793d8c49b6698b09.jpg) center center no-repeat #fff;
+                        float: left;
+                        a{
+                            display: block;
+                            .to-time{
+                                height: 36px;
+                                font-size: 28px;
+                                line-height: 36px;
+                                margin-bottom: 11px;
+                                color: #615548;
+                                text-align: center;
+                            }
+                            .line{
+                                width: 20px;
+                                height: 2px;
+                                margin: 0 auto 18px;
+                                background: #61594b;
+                            }
+                            .p2{
+                                margin-bottom: 18px;
+                                font-size: 18px;
+                                color: #615548;
+                                line-height: 22px;
+                                height: 22px;
+                                text-align: center;
+                            }
+                            .countdown{
+                                height: 40px;
+                                margin-bottom: 50px;
+                                text-align: center;
+                                color: #333;
+                                .c-1{
+                                    height: 40px;
+                                    width: 40px;
+                                    color: #fff;
+                                    font-size: 18px;
+                                    line-height: 40px;
+                                    text-align: center;
+                                    background-color: #615548;
+                                    border-radius: 2px;
+                                    display: inline-block;                                    
+                                }
+                            }
+                            .whole{
+                                display: block;
+                                width: 110px;
+                                height: 30px;
+                                margin: 0 auto;
+                                line-height: 30px;
+                                color: #fff;
+                                font-size: 14px;
+                                background-color: #a7936e;
+                                cursor: pointer;
+                                border-radius: 15px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    .t-img-r{
+                        width: 866px;
+                        height: 100%;
+                        float: right;
+                        .t-img-r-item{
+                            width: 433px;
+                            height: 189px;
+                            border: 1px solid #f0ece4;
+                            border-left: none;
+                            float: left;
+                            &.r-3,&.r-4{
+                                margin-top: -1px;
+                            }
+                            .t-img-r-item-left{
+                                width: 180px;
+                                margin: 3px 0;
+                                height: 180px;
+                                float: left;
+                                a,img{
+                                    display: block;                                    
+                                }
+                            }
+                            .t-img-r-item-right{
+                                float: left;                               
+                                height: 187px;
+                                padding-top: 14px;
+                                width: 252px;
+                                .p-1{
+                                    height: 26px;
+                                    line-height: 26px;
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                    color: #666;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                    overflow: hidden;
+                                }
+                                .p-2{
+                                    height: 24px;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 24px;
+                                    color: #999;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                    overflow: hidden;
+                                }
+                                .p-3{
+                                    padding: 14px 0 8px;
+                                    height: 36px;
+                                    .s-1{
+                                        float: left;
+                                        position: relative;
+                                        width: 152px;
+                                        height: 10px;
+                                        margin: 2px 6px 2px 0;
+                                        border: 1px solid #f2cecd;
+                                        background: #ffe5e5;
+                                        border-radius: 5px;
+                                        overflow: hidden;
+                                    }
+                                    .s-2{
+                                        height: 14px;
+                                        font-size: 14px;
+                                        color: #999;
+                                        line-height: 14px;
+                                    }
+                                }
+                                .p-4{
+                                    font-size: 14px;
+                                    .s-1{
+                                        color: #be4141;
+                                        span{
+                                            &:first-child{
+                                                font-size: 18px;
+                                            }
+                                            &:last-child{
+                                                margin-right: 12px;
+                                                vertical-align: sub;
+                                                font-weight: 700;
+                                                font-size: 24px;
+                                            }    
+                                        }
+                                    }
+                                    .s-2{
+                                        text-decoration: line-through;
+                                        color: #999;   
+                                    }
+                                }
+                                .p-5{
+                                    width: 118px;
+                                    height: 31px;
+                                    margin-top: 18px;
+                                    line-height: 31px;
+                                    text-align: center;
+                                    font-size: 16px;
+                                    border-radius: 2px;
+                                    cursor: pointer;
+                                    background-color: #be4141;
+                                    color: #fff;
+                                }
+
+                            }
+
+                        }
+                    }
                 }  
             }
+
+            &.e-4{
+                height: 526px;
+                padding: 54px 0 52px;
+                .welfare{
+
+                    .w-img{
+
+                        .w-img-l{
+                            width: 100%;
+                            height: 420px;
+                            overflow: hidden;
+                            position: relative; 
+                        }
+
+                    }
+
+                }
+               
+            }
+
         }
 
     }
