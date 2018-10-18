@@ -28,6 +28,7 @@ body{min-height: 100%;
             line-height: 1;
             margin-right: 20px;
         }
+    
         button{
             display: block;                   
             width: 50px;
@@ -44,6 +45,8 @@ body{min-height: 100%;
             &.to-right{float: right;right: 186.5px;};
             &:hover{background: #B19E7A;}
         }
+        
+        
         .sec-center{
             width: 1090px;
             margin: 0 auto;
@@ -119,14 +122,13 @@ body{min-height: 100%;
         position: relative;           
         ul{
             position: absolute;
-            width:800%;
+            width:15360px;
             height:100% ;
             li{                    
                 float: left;
+                width: 1920px;
                 img{
-                    display: block;
-                    width: 100%;
-                    height: 100%;
+                    display: block;                   
                 }
             } 
         }
@@ -156,7 +158,8 @@ body{min-height: 100%;
                     border-radius: 50%;  
                     background: #fff;
                 };
-                &:hover{                                      
+                
+                &.bannerActive{                                      
                     border: none;
                     background: #dfcead;
                     box-shadow:0 0 0 4px #dfcead;
@@ -931,17 +934,27 @@ body{min-height: 100%;
         height: 660px;
         padding: 60px;
         background: #f4f0ea;
-        .a-img{
+        position: relative;
+        .a-img{ 
+            width: 1090px;
             height: 492px;
+            
             .sowing-bottom{
                 width: 100%;
-                overflow: hidden;
+                
                 ul{
-                    width: 9542px;
+                    width:7340px;
+                    position: absolute;
+                    .limit{
+                        width: 1101px;
+                    }
                     li{
                         width: 367px;
                         float: left;
                         padding-right: 12px;
+                        &:nth-child(3n){
+                            padding-right: 0;
+                        }
                         .m-product{
                             background: #fff;
                             height: 492px;
@@ -957,10 +970,11 @@ body{min-height: 100%;
                                     height: 100%;
                                     img{
                                         display: block;
+                                        background: #fff;
                                     }
                                 }
                             }
-                            .bd{
+                            .bd_comment{
                                 position: absolute;
                                 margin: 0 5px;
                                 min-height: 180px!important;
@@ -971,8 +985,9 @@ body{min-height: 100%;
                                 background: #fff;
                                 .m-comment{
                                     padding: 20px 15px;
-                                    overflow: hidden;
-                                    .bd _top{
+                                    // overflow: hidden;
+                                    ._top{
+                                        height: 14px;
                                         color: #999;
                                         font-size: 13px;
                                         line-height: 1;
@@ -990,11 +1005,13 @@ body{min-height: 100%;
                                         }
                                         
                                     }
-                                    .bd _middle{
+                                    ._middle{
+                                        height: 24px;
                                         color: #999;
                                         margin-bottom: 16px;
-                                        .pname{
-                                            max-width: 190px;
+                                        .pname{ 
+                                            float: left;
+                                            width: 190px;
                                             font-size: 16px;
                                             height: 16px;
                                             overflow: hidden;
@@ -1016,10 +1033,23 @@ body{min-height: 100%;
                                             }
                                         }
                                     }
+                                    .comment-content{
+                                        text-align: left;
+                                        font-size: 13px;
+                                        color: #333;
+                                        line-height: 16px;
+                                        min-height: 80px;
+                                        max-height: 80px;
+                                        overflow: hidden;
+                                        position: relative;
+                                    }
                                 }
                             }
                         }
                     }
+                }
+                .to-left,.to-right{
+                    top:260px!important;
                 }
             }
         }

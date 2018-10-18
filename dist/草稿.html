@@ -21,7 +21,7 @@
 		<!--轮播图上-->
 		<div id="sowing-map-top" class="sowing-map-top clearfix">
 			<div class="sowing-con">
-				<ul class="clearfix">
+				<ul class="clearfix sowing-top" id="sowing-top">
 					<li><a href="#"><img src="images/pic_138.png" alt="活动 十月大促预热" /></a></li>
 					<li><a href="#"><img src="images/pic_139.png" alt="活动 秋冬秒杀周" /></a></li>
 					<li><a href="#"><img src="images/pic_140.png" alt="活动 配件10月" /></a></li>
@@ -35,9 +35,8 @@
 
 			<button class="to-left">&lt;</button>
 			<button class="to-right">&gt;</button>
-			<ul class="sowing-index clearfix">
-
-				<li><a href="#"></a></li>
+			<ul id="top-index-list" class="sowing-index clearfix">
+				<li class="bannerActive"><a href="#"></a></li>
 				<li><a href="#"></a></li>
 				<li><a href="#"></a></li>
 				<li><a href="#"></a></li>
@@ -389,7 +388,7 @@
 					<div class="w-img clearfix">
 						<div class="w-img-l">
 							<div class="sowing-con">
-								<ul class="clearfix">
+								<ul class="clearfix sowing-w-img">
 									<li><a href="#"><img src="images/pic_494.png" alt=""></a></li>
 									<li><a href="#"><img src="images/pic_495.png" alt=""></a></li>
 									<li><a href="#"><img src="images/pic_496.png" alt=""></a></li>
@@ -398,8 +397,8 @@
 							</div>
 							<button class="to-left">&lt;</button>
 							<button class="to-right">&gt;</button>
-							<ul class="sowing-index clearfix">
-								<li><a href="#"></a></li>
+							<ul class="w-list-index clearfix">
+								<li class="bannerActive"><a href="#"></a></li>
 								<li><a href="#"></a></li>
 								<li><a href="#"></a></li>
 								<li><a href="#"></a></li>
@@ -1593,37 +1592,13 @@
 					<span>生活，没有统一标准</span>
 				</div>
 				<div class="a-img e-img">
-					<div class="sowing-bottom"><!--class="sowing-con"-->
-						<ul class="clearfix">
-							<!-- <li class="a-img-item">
-								<div class="m-product">
-									<div class="hd">
-										<a href="#">
-											<div><img src="images/pic_559.png"></div>
-										</a>
-									</div>
-									<div class="bd bd_comment">
-										<div class="m-comment">
-											<div class="bd _top">
-												<span class="frontname">如****。</span>
-												<span class="date">2018-09-18 20:54</span>
-											</div>
-											<div class="bd _middle">
-												<span class="pname">100%纯山羊绒 女式装饰链条圆领羊绒衫</span>
-												<span class="price">
-													<span>¥</span>
-													<span>699</span>
-												</span>
-											</div>
-											<div class="comment-content">
-												<p  data-id=".2.8.0.1.0.0.$17.0.1.0.2.0">手感很好，而且版型冬天穿起来很舒服</p>
-												<s class="more"></s>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li> -->
+					<button class="to-left">&lt;</button>
+					<button class="to-right">&gt;</button>
+					<div class="sowing-bottom sowing-con"><!--class="sowing-con"-->
+						<ul class="clearfix sowing-a-img">
+							<div class="limit"></div>
 						</ul>
+						
 					</div>
 				</div>
 			</div>
@@ -1666,7 +1641,7 @@
 
 				pic_num += 2;
 				html += oLi;
-				console.log(pic_num)
+				
 			};
 			oUl.html(html);
 		};
@@ -1675,8 +1650,8 @@
 		//大家都在说
 		function creatEle_2(pic_num) {
 			var html = "";
-			var oUl = $(".a-img ul");
-			for (i = 0; i < 23; i++) {
+			var oDiv = $(".a-img .limit");
+			for (i = 0; i < 20; i++) {
 
 				oLi = `
 				<li class="a-img-item">
@@ -1700,7 +1675,7 @@
 												</span>
 											</div>
 											<div class="comment-content">
-												<p  data-id=".2.8.0.1.0.0.$17.0.1.0.2.0">手感很好，而且版型冬天穿起来很舒服</p>
+												<p>手感很好，而且版型冬天穿起来很舒服</p>
 												<s class="more"></s>
 											</div>
 										</div>
@@ -1711,9 +1686,9 @@
 
 				pic_num ++;
 				html += oLi;
-				console.log(pic_num)
+				
 			};
-			oUl.html(html);
+			oDiv.html(html);
 		};
 		creatEle_2(559)
 	</script>

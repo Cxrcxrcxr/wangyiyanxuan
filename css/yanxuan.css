@@ -100,14 +100,13 @@ section {
   position: relative; }
   .sowing-con ul {
     position: absolute;
-    width: 800%;
+    width: 15360px;
     height: 100%; }
     .sowing-con ul li {
-      float: left; }
+      float: left;
+      width: 1920px; }
       .sowing-con ul li img {
-        display: block;
-        width: 100%;
-        height: 100%; }
+        display: block; }
 
 .sowing-index {
   width: 100%;
@@ -130,12 +129,12 @@ section {
       border: 1px solid #ccc;
       border-radius: 50%;
       background: #fff; }
-    .sowing-index li:hover {
+    .sowing-index li.bannerActive {
       border: none;
       background: #dfcead;
       box-shadow: 0 0 0 4px #dfcead;
       border-radius: 50%; }
-      .sowing-index li:hover a {
+      .sowing-index li.bannerActive a {
         background: #a7936e;
         border: none;
         border-radius: 50%; }
@@ -687,18 +686,24 @@ section {
 #sowing-map-bottom {
   height: 660px;
   padding: 60px;
-  background: #f4f0ea; }
+  background: #f4f0ea;
+  position: relative; }
   #sowing-map-bottom .a-img {
+    width: 1090px;
     height: 492px; }
     #sowing-map-bottom .a-img .sowing-bottom {
-      width: 100%;
-      overflow: hidden; }
+      width: 100%; }
       #sowing-map-bottom .a-img .sowing-bottom ul {
-        width: 9542px; }
+        width: 7340px;
+        position: absolute; }
+        #sowing-map-bottom .a-img .sowing-bottom ul .limit {
+          width: 1101px; }
         #sowing-map-bottom .a-img .sowing-bottom ul li {
           width: 367px;
           float: left;
           padding-right: 12px; }
+          #sowing-map-bottom .a-img .sowing-bottom ul li:nth-child(3n) {
+            padding-right: 0; }
           #sowing-map-bottom .a-img .sowing-bottom ul li .m-product {
             background: #fff;
             height: 492px;
@@ -713,8 +718,9 @@ section {
                 width: 100%;
                 height: 100%; }
                 #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .hd div img {
-                  display: block; }
-            #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd {
+                  display: block;
+                  background: #fff; }
+            #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd_comment {
               position: absolute;
               margin: 0 5px;
               min-height: 180px !important;
@@ -723,27 +729,29 @@ section {
               zoom: 1;
               overflow: hidden;
               background: #fff; }
-              #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd .m-comment {
-                padding: 20px 15px;
-                overflow: hidden; }
-                #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd .m-comment .bd _top {
+              #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd_comment .m-comment {
+                padding: 20px 15px; }
+                #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd_comment .m-comment ._top {
+                  height: 14px;
                   color: #999;
                   font-size: 13px;
                   line-height: 1;
                   margin-bottom: 12px; }
-                  #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd .m-comment .bd _top span {
+                  #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd_comment .m-comment ._top span {
                     float: left; }
-                    #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd .m-comment .bd _top span.frontname {
+                    #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd_comment .m-comment ._top span.frontname {
                       font-weight: 400;
                       font-size: 14px;
                       line-height: 14px; }
-                    #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd .m-comment .bd _top span.date {
+                    #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd_comment .m-comment ._top span.date {
                       padding-left: 10px; }
-                #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd .m-comment .bd _middle {
+                #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd_comment .m-comment ._middle {
+                  height: 24px;
                   color: #999;
                   margin-bottom: 16px; }
-                  #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd .m-comment .bd _middle .pname {
-                    max-width: 190px;
+                  #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd_comment .m-comment ._middle .pname {
+                    float: left;
+                    width: 190px;
                     font-size: 16px;
                     height: 16px;
                     overflow: hidden;
@@ -753,11 +761,22 @@ section {
                     color: #333;
                     font-weight: 700;
                     line-height: 14px; }
-                  #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd .m-comment .bd _middle .price {
+                  #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd_comment .m-comment ._middle .price {
                     margin-bottom: 0;
                     margin-right: 15px;
                     color: #b4a078;
                     float: right; }
-                    #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd .m-comment .bd _middle .price span {
+                    #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd_comment .m-comment ._middle .price span {
                       height: 13px;
                       line-height: 13px; }
+                #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd_comment .m-comment .comment-content {
+                  text-align: left;
+                  font-size: 13px;
+                  color: #333;
+                  line-height: 16px;
+                  min-height: 80px;
+                  max-height: 80px;
+                  overflow: hidden;
+                  position: relative; }
+      #sowing-map-bottom .a-img .sowing-bottom .to-left, #sowing-map-bottom .a-img .sowing-bottom .to-right {
+        top: 260px !important; }

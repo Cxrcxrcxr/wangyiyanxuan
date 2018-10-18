@@ -1,18 +1,19 @@
 
-//大轮播图
+//轮播图
 
 function Banner(){}
         $.extend(Banner.prototype,{
             init: function(options){
                 this.item_list = $(options.item_list);
+                console.log(this.item_list)
                 this.left_btn = $(options.left_btn);
                 this.right_btn = $(options.right_btn);
                 this.btn_list = $(options.btn_list);
                 this.nowIndex = 0;
                 this.item_num = this.item_list.length;
-                this.ul = $(".sowing-con ul");
+                this.ul = $(options.ul);
                 this.item_width = this.item_list.width();
-                if(this.left_btn.length == 0 && this.right_btn.lenght ==0 && this.btn_list.length == 0){
+                if(this.left_btn.length == 0 && this.right_btn.length ==0 && this.btn_list.length == 0){
                     this.autoPlay();
                     return 0 ;
                 }
@@ -40,7 +41,7 @@ function Banner(){}
                 this.animate();
             },
             prev:function(){
-                
+                   console.log(this);
                 if( this.nowIndex == 0){
                     this.nowIndex = this.item_num - 2;
                     this.ul.css({
@@ -63,26 +64,48 @@ function Banner(){}
                 })
                 var index = this.nowIndex == this.item_num - 1 ? 0 :this.nowIndex;
                 this.btn_list.eq(index).addClass("bannerActive")
-                .siblings("button").removeClass("bannerActive");
+                .siblings("li").removeClass("bannerActive");
             },
             autoPlay : function(){
                 this.autoTimer = setInterval(function(){
                     this.next();
-                }.bind(this),2000)
+                }.bind(this),3000)
             },
             stopPlay : function(){
                clearInterval(this.autoTimer)    
             }
         })
-        var banner = new Banner();
-        banner.init({
-            item_list : ".sowing-con li",
-            left_btn : ".to-left",
-            right_btn : ".to-right",
-            btn_list : ".sowing-index li" 
+		//大轮播图
+        var banner1 = new Banner();
+        banner1.init({
+            item_list : ".sowing-top li",
+            left_btn : " #sowing-map-top .to-left",
+            right_btn : "#sowing-map-top .to-right",
+            btn_list : "#top-index-list li" ,
+            ul:".sowing-top"
+            
         })
+        //新品首发轮播图
+        var banner2 = new Banner();
+        banner2.init({
+            item_list : ".sowing-w-img li",
+            left_btn : " .w-img-l .to-left",
+            right_btn : ".w-img-l .to-right",
+            btn_list : ".w-list-index li" ,
+            ul:".sowing-w-img"
+            
+        })
+        //底部轮播图
+        var banner3 = new Banner();
+        banner3.init({
+            item_list : ".sowing-a-img li",
+            left_btn : " .a-img .to-left",
+            right_btn : ".a-img .to-right",
+            ul:".sowing-a-img"
+            
+        })
+        
 
-//新品首发轮播图
 
 
 
