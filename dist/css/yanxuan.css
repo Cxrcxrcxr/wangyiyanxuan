@@ -86,7 +86,6 @@ section {
       float: right;
       line-height: 1;
       padding-top: 14px;
-      cursor: pointer;
       font-size: 14px; }
 
 .sowing-map-top {
@@ -661,11 +660,104 @@ section {
     #nav-details .nav-details-itme .n-big-img img {
       display: block; }
   #nav-details .nav-details-itme .n-img {
-    height: 411px;
     overflow: hidden; }
     #nav-details .nav-details-itme .n-img .n-img-item {
       float: left;
       margin: 0 10px 50px 0;
       width: 265px; }
+      #nav-details .nav-details-itme .n-img .n-img-item:last-child {
+        margin-right: 0; }
       #nav-details .nav-details-itme .n-img .n-img-item .pro-img {
-        background-color: #f4f4f4; }
+        background-color: #f4f4f4;
+        margin-bottom: 8px; }
+
+#choices {
+  height: 428px;
+  margin-bottom: 80px; }
+  #choices .c-img .c-img-l {
+    float: left;
+    margin-right: 10px; }
+  #choices .c-img .c-img-r {
+    float: left; }
+    #choices .c-img .c-img-r a, #choices .c-img .c-img-r img {
+      display: block; }
+    #choices .c-img .c-img-r .a-1 {
+      margin-bottom: 10px; }
+
+#sowing-map-bottom {
+  height: 660px;
+  padding: 60px;
+  background: #f4f0ea; }
+  #sowing-map-bottom .a-img {
+    height: 492px; }
+    #sowing-map-bottom .a-img .sowing-bottom {
+      width: 100%;
+      overflow: hidden; }
+      #sowing-map-bottom .a-img .sowing-bottom ul {
+        width: 9542px; }
+        #sowing-map-bottom .a-img .sowing-bottom ul li {
+          width: 367px;
+          float: left;
+          padding-right: 12px; }
+          #sowing-map-bottom .a-img .sowing-bottom ul li .m-product {
+            background: #fff;
+            height: 492px;
+            width: 355px;
+            position: relative; }
+            #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .hd {
+              margin-bottom: 0;
+              height: 355px;
+              width: 355px;
+              overflow: hidden; }
+              #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .hd div {
+                width: 100%;
+                height: 100%; }
+                #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .hd div img {
+                  display: block; }
+            #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd {
+              position: absolute;
+              margin: 0 5px;
+              min-height: 180px !important;
+              width: 345px;
+              bottom: 0;
+              zoom: 1;
+              overflow: hidden;
+              background: #fff; }
+              #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd .m-comment {
+                padding: 20px 15px;
+                overflow: hidden; }
+                #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd .m-comment .bd _top {
+                  color: #999;
+                  font-size: 13px;
+                  line-height: 1;
+                  margin-bottom: 12px; }
+                  #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd .m-comment .bd _top span {
+                    float: left; }
+                    #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd .m-comment .bd _top span.frontname {
+                      font-weight: 400;
+                      font-size: 14px;
+                      line-height: 14px; }
+                    #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd .m-comment .bd _top span.date {
+                      padding-left: 10px; }
+                #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd .m-comment .bd _middle {
+                  color: #999;
+                  margin-bottom: 16px; }
+                  #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd .m-comment .bd _middle .pname {
+                    max-width: 190px;
+                    font-size: 16px;
+                    height: 16px;
+                    overflow: hidden;
+                    text-align: left;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    color: #333;
+                    font-weight: 700;
+                    line-height: 14px; }
+                  #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd .m-comment .bd _middle .price {
+                    margin-bottom: 0;
+                    margin-right: 15px;
+                    color: #b4a078;
+                    float: right; }
+                    #sowing-map-bottom .a-img .sowing-bottom ul li .m-product .bd .m-comment .bd _middle .price span {
+                      height: 13px;
+                      line-height: 13px; }
