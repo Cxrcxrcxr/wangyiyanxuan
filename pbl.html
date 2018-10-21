@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		#wrap{
+			width: 900px;
+			border:2px solid ;
+			margin:0 auto;
+			display:flex;
+			justify-content: space-around;
+			align-items: flex-start;
+			padding:10px 0;
+		}
+		.box{
+			width: 280px;	
+		}
+		.item{
+			width: 100%;
+			font-size: 100px;
+			text-align: center;
+			margin:10px 0;
+		}
+		#returnTop{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			font-size: 30px;
+			text-align: center;
+			cursor: pointer;
+			position: fixed;
+			bottom: 70px;
+			right: 20px;
+			background-color: #FDADAD;
+			display: none;
+		}
+ 
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	</div>
+	<div id="returnTop">
+		⬆️
+	</div>
+	
+</body>
+<!-- <script src="js/tween.js"></script> -->
+<script>
+	//获取元素  动态获取
+	var boxs = document.getElementsByClassName("box");
+ 
+	createItem(30);
+ 
+	//防止多个计时器开启扰乱动画
+	var timer =null;
+	returnTop.onclick = function(){
+		//时刻获取页面的滚动偏移量
+		var scroll = document.body.scrollTop || window.pageYOffset || document.documentElement.scrollTop;
+		var t=0,d=50,b=scroll,c=0-b;
+		if(timer==null){
+			timer=setInterval(function(){
+				t++;
+				//设置滚动偏移量要主要兼容
+				if(document.body.scrollTop){
+					document.body.scrollTop=Tween.Bounce.easeOut(t,b,c,d);
+				}else{
+					document.documentElement.scrollTop=Tween.Bounce.easeOut(t,b,c,d);
+				}
+ 
+				if(t>=d){
+					clearInterval(timer);
+					timer=null;
+				}
+			},100);
+		}
+	}
+ 
+
+
+
+
+
+    var backButton=$('.back_to_top');
+    function backToTop() {
+        $('html,body').animate({
+            scrollTop: 0
+        }, 800);
+    }
+    backButton.on('click', backToTop);
+ 
+    $(window).on('scroll', function () {/*当滚动条的垂直位置大于浏览器所能看到的页面的那部分的高度时，回到顶部按钮就显示 */
+        if ($(window).scrollTop() > $(window).height())
+            backButton.fadeIn();
+        else
+            backButton.fadeOut();
+    });
+    $(window).trigger('scroll');
+
+
+
+
+	//无限添加
+	window.onscroll = function(){
+		//时刻获取页面的滚动偏移量
+		var scroll = document.body.scrollTop || window.pageYOffset || document.documentElement.scrollTop;
+ 
+		//控制返回按钮的隐藏和显示
+		if(scroll>0){
+			returnTop.style.display="block";
+		}else{
+			returnTop.style.display="none"
+		}
+ 
+		//页面滚动偏移+窗口可视区域 >= 瀑布流中最小一列的高度
+		//当瀑布流中高度最小一列内容即将完全显示在页面上时,我们就需要创建并添加新元素
+		//获取浏览器窗口可视区域高度
+		var ch = document.documentElement.clientHeight;
+		//获取瀑布流最小高度
+		var mh = minIndex()[1];
+ 
+		if(scroll+ch>=mh-50){
+			createItem(20);
+		}
+	}
+ 
+	//创建指定数量元素的瀑布流
+	function createItem(n){
+		for(var i=0;i<n;i++){
+			var div = document.createElement("div");
+			div.className="item";
+			div.innerHTML=i+1;
+			div.style.backgroundColor=randomColor();
+			div.style.height=randomNum(200,500)+"px";
+			div.style.lineHeight=div.style.height;
+			//找到最小一列的下标像里面添加新元素以平衡每列的高度
+			var index = minIndex()[0];
+			boxs[index].appendChild(div);
+ 
+		}
+	}
+ 
+	//返回最低高度下标和最小高度函数,返回的是一个数组,第一个元素是最小下标的高度,第二个元素是最小高度的值
+	function minIndex(){
+		var heightArr=[];
+		for(var i=0;i<boxs.length;i++){
+			heightArr.push(boxs[i].clientHeight);
+		}
+		//假设最小高度是第一列的高度
+		var minHeight=heightArr[0];
+		for(var i=0;i<heightArr.length;i++){
+			//如果有高度小于假设的最小高度,那么就用小的高度替换假设的值
+			if(minHeight>heightArr[i]){
+				minHeight=heightArr[i];
+			}
+		}
+		//将数组中最小值的下标和最小高度进行返回
+		return [heightArr.indexOf(minHeight),minHeight];
+	}
+	
+	//随机高度的方法
+   function randomNum(min,max){
+   	return Math.floor(Math.random()*(max-min+1)+min);
+   }
+   //随机颜色的高度
+   function randomColor(){
+   	return "rgb("+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+")";
+   }
+</script>
+</html>
