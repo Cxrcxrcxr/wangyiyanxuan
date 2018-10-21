@@ -44,52 +44,65 @@
 </head>
 <body>
 	<div id="wrap">
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
+		<div class="box">
+			<div class="pro-img">
+				<a href="#">
+					<img src="images/pic_507.png" alt="" class="show">
+				</a>
+			</div>
+			<div class="pro-message">
+				<div class="preferential"><span>特价</span></div>
+				<a href="#">升级款95%白鹅绒秋冬加厚羽绒被</a>
+				<p class="pro-price">
+					<a href="#"><span class="now-price">&yen;1034.1</span></a>
+					<span class="pre-price">&yen;1149</span>
+				</p>
+			</div>
+		</div>
+		<div class="box">
+			<!-- <div class="pro-img">
+				<a href="#">
+					<img src="images/pic_508.png" alt="" class="show">
+				</a>
+			</div>
+			<div class="pro-message">
+				<div class="preferential"><span>特价</span></div>
+				<a href="#">升级款95%白鹅绒秋冬加厚羽绒被</a>
+				<p class="pro-price">
+					<a href="#"><span class="now-price">&yen;1034.1</span></a>
+					<span class="pre-price">&yen;1149</span>
+				</p> -->
+			</div>
+		</div>
+		<div class="box">
+			<!-- <div class="pro-img">
+				<a href="#">
+					<img src="images/pic_509.png" alt="" class="show">
+				</a>
+			</div>
+			<div class="pro-message">
+				<div class="preferential"><span>特价</span></div>
+				<a href="#">升级款95%白鹅绒秋冬加厚羽绒被</a>
+				<p class="pro-price">
+					<a href="#"><span class="now-price">&yen;1034.1</span></a>
+					<span class="pre-price">&yen;1149</span>
+				</p> -->
+			</div>
+		</div>
 	</div>
 	<div id="returnTop">
 		⬆️
 	</div>
 	
 </body>
-<!-- <script src="js/tween.js"></script> -->
+<script src="js/jquery-2.1.0.js"></script>
 <script>
 	//获取元素  动态获取
-	var boxs = document.getElementsByClassName("box");
+	var boxs = $(".box");
  
 	createItem(30);
- 
-	//防止多个计时器开启扰乱动画
-	var timer =null;
-	returnTop.onclick = function(){
-		//时刻获取页面的滚动偏移量
-		var scroll = document.body.scrollTop || window.pageYOffset || document.documentElement.scrollTop;
-		var t=0,d=50,b=scroll,c=0-b;
-		if(timer==null){
-			timer=setInterval(function(){
-				t++;
-				//设置滚动偏移量要主要兼容
-				if(document.body.scrollTop){
-					document.body.scrollTop=Tween.Bounce.easeOut(t,b,c,d);
-				}else{
-					document.documentElement.scrollTop=Tween.Bounce.easeOut(t,b,c,d);
-				}
- 
-				if(t>=d){
-					clearInterval(timer);
-					timer=null;
-				}
-			},100);
-		}
-	}
- 
 
-
-
-
-
-    var backButton=$('.back_to_top');
+    var backButton=$('#returnTop');
     function backToTop() {
         $('html,body').animate({
             scrollTop: 0
@@ -104,8 +117,6 @@
             backButton.fadeOut();
     });
     $(window).trigger('scroll');
-
-
 
 
 	//无限添加
@@ -135,9 +146,11 @@
 	//创建指定数量元素的瀑布流
 	function createItem(n){
 		for(var i=0;i<n;i++){
-			var div = document.createElement("div");
+			var $div = $('<div><div class="pro-img"><a href="#"><img src="images/pic_507.png" alt="" class="show"></a></div><div class="pro-message"><div class="preferential"><span>特价</span></div><a href="#">升级款95%白鹅绒秋冬加厚羽绒被</a><p class="pro-price"><a href="#"><span class="now-price">&yen;1034.1</span></a><span class="pre-price">&yen;1149</span></p></div></div>');
 			div.className="item";
-			div.innerHTML=i+1;
+			div.innerHTML=
+					i+1
+			;
 			div.style.backgroundColor=randomColor();
 			div.style.height=randomNum(200,500)+"px";
 			div.style.lineHeight=div.style.height;
